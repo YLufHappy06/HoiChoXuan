@@ -104,6 +104,7 @@ html{
 
 .title{
     text-align: center;
+    margin-bottom: 25px;
 }
 .title h1{
     border-bottom: gold 1px solid;
@@ -114,9 +115,15 @@ html{
 }
 .src{
     text-decoration: none;
+    padding: 10px;
+    border-radius: 1em;
 }
 .src:hover{
     color: aquamarine;
+    background-color: rgba(0, 62, 155, 0.5);
+    border:none;
+    border-bottom: 1px aquamarine solid;
+    border-right: 1px aquamarine solid;
 }
 
 /* features */
@@ -309,7 +316,6 @@ a{
 
 @media (max-width: 768px) {
 body {
-    font-size: 14px;
     display: flex;
     flex-direction: column;
   }
@@ -329,5 +335,7 @@ body {
 .title h1{
         font-size: 20px;
     }
+.list-showcase{
+    width: 90%;
 }
-
+}
