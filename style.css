@@ -1,7 +1,7 @@
 /* body */
 
 html{
-    scroll-snap-type: both mandatory;
+    scroll-snap-type: both proximity;
 }
 
 #main-body {
@@ -60,9 +60,9 @@ html{
     transition: all 0.3s;
 }
 
-#body td :hover{
+/* #body td :hover{
     transform: scale(1.05);
-}
+} */
 
 .content-table .left-slot{
     border-right: 1px white dashed;
@@ -75,6 +75,8 @@ html{
     margin: 0;
     padding: 0;
     position: relative;
+    display: flex;
+    justify-content: center;
 
     height: 150px;
 
@@ -84,16 +86,24 @@ html{
     background-position: center;
 }
 #main-header h1{
-    text-align: center;
     animation: flashtext;
+    align-self: center;
     animation-iteration-count: infinite;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
 }
-#main-header div{
+#offical-web-link{
     position: absolute;
     bottom: 0;
     right: 0;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 125%;
+}
+#main-header #time-count{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    gap:20px;
     font-family:'Courier New', Courier, monospace;
     font-size: 125%;
 }
@@ -107,8 +117,6 @@ html{
     margin-bottom: 25px;
 }
 .title h1{
-    border-bottom: gold 1px solid;
-    box-shadow: 0px 25px 25px 10px rgba(255, 255, 0, 0.1);
     padding: 10px;
     font-family: 'Bungee';
     color:rgb(255, 235, 211);
@@ -131,6 +139,10 @@ html{
 .text{
     padding-left: 15%;
     padding-right: 15%;
+}
+
+.money{
+    color:rgb(187, 255, 119);
 }
 
 .page{
@@ -171,11 +183,18 @@ html{
 }
 
 .drop-shadow{
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4);
+    /* box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4); */
+    transition: all 0.4s;
+    filter: drop-shadow( 25px 15px 10px rgba(0, 0, 0, 0.4));
 }
+
+/* .drop-shadow:hover{
+    transform:rotate3d(1,3,0, 45deg);
+} */
 
 .mark{
     background-color: rgba(255, 230, 0, 0.2);
+    width: fit-content;
 }
 
 /* sections */
@@ -222,6 +241,42 @@ iframe {
     scrollbar-width:auto;
 }
 
+/* custom list type */
+
+.time-list{
+    border: 2px inset rgb(255, 206, 161);
+    padding: 20px;
+}
+
+.time-list dt{
+    color: gold;
+}
+
+.time-list dd{
+    margin-bottom: 1em;
+    font-family: monospace;
+}
+
+.time-list dd ul li{
+    margin-bottom: 10px;
+}
+
+.custom-type li{
+    list-style-type: none;
+    position: relative;
+    margin-bottom: 1em;
+}
+.custom-type li::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-image: linear-gradient(to right,yellow, rgb(216, 140, 0));
+    border-radius: 50%;
+    top:15px;
+    left:-20px;
+}
+
 .list-container{
     display: flex;
     justify-content: center;
@@ -230,6 +285,7 @@ iframe {
 .list-showcase{
     width: 65%;
     aspect-ratio: 96/60;
+    box-shadow: 0 0 15px 15px rgba(255, 185, 80, 0.144);
 }
 
 .list-site{
@@ -329,13 +385,44 @@ body {
         font-size: 18px;
     }
 #cvl_logo{
-        width: 75px;
+        width: 50px;
     }
+#offical-web-link{
+    font-size: 100%;
+}
+
+#main-header #time-count{
+    font-size: 100%;
+    top: 0
+}
+
+nav {
+    font-size: 10px;
+}
 
 .title h1{
         font-size: 20px;
     }
 .list-showcase{
     width: 90%;
+}
+
+.custom-type li::before{
+    width: 5px;
+    height: 5px;
+    top:5px;
+    left:-10px;
+}
+
+.time-list{
+    padding: 5px;
+}
+
+.time-list dd{
+    margin-bottom: 10px;
+}
+
+.time-list dd ul li{
+    margin-bottom: 5px;
 }
 }
