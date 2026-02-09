@@ -84,6 +84,24 @@ html{
         linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75)), 
         url(assets/img/chau-van-liem.jpg); 
     background-position: center;
+
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
+    transform-origin: top;
+    transform: scaleY(1);
+    opacity: 1;
+}
+#main-header.hidden {
+    animation: hide;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#main-header.showed {
+    animation: show;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 #main-header h1{
     animation: flashtext;
@@ -200,15 +218,34 @@ html{
 /* sections */
 
 nav {
-    background-color: #ffffff;
+    background-color: lightyellow;
     box-shadow: 0 4px 2px -2px gray;
     border-bottom: 1px solid;
+}
+
+#hide-show-button{
+    font-size: 150%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 225, 94);
+    border: none;
+    transition:  all 0.3s;
+}
+
+#hide-show-button:hover{
+
+    background-color: rgb(139, 118, 21);
+    color:white;
 }
 nav ul {
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+nav ul li:nth-child(1){
+    flex: 0 0 100px;
 }
 
 nav li {
@@ -220,7 +257,8 @@ nav li {
 nav a {
     text-decoration: none;
     font-size: 1.2em;
-    color: #003366;
+    /* color: #003366; */
+    color:rgb(71, 25, 14);
 }
 
 .section-name{
@@ -230,7 +268,8 @@ nav a {
 
 .section-name:hover {
     color: #ffffff;
-    background-color: #001429;
+    /* background-color: #001429; */
+    background-color:rgb(71, 56, 14);
     transform: scale(1.1);
 }
 
@@ -351,6 +390,22 @@ a{
   }
 }
 
+@keyframes hide{
+    0% {height: 150px;
+        transform: scaleY(1);}
+    25%{transform: scale(1);}
+    100% {height: 0px;
+        transform: scaleY(0);}
+}
+
+@keyframes show{
+    0% {height: 0px;
+        transform: scaleY(0);}
+    75%{transform: scale(1);}
+    100% {height: 150px;
+        transform: scaleY(1);}
+}
+
 /* font */
 @font-face {
   font-family: Bungee;
@@ -368,61 +423,4 @@ a{
   /* font-weight: normal;
   font-style: normal;
   font-display: swap; */
-}
-
-@media (max-width: 768px) {
-body {
-    display: flex;
-    flex-direction: column;
-  }
-#body{
-    padding: 0;
-    margin:0;
-    font-size: 8px;
-}
-
-#main-header h1{
-        font-size: 18px;
-    }
-#cvl_logo{
-        width: 50px;
-    }
-#offical-web-link{
-    font-size: 100%;
-}
-
-#main-header #time-count{
-    font-size: 100%;
-    top: 0
-}
-
-nav {
-    font-size: 10px;
-}
-
-.title h1{
-        font-size: 20px;
-    }
-.list-showcase{
-    width: 90%;
-}
-
-.custom-type li::before{
-    width: 5px;
-    height: 5px;
-    top:5px;
-    left:-10px;
-}
-
-.time-list{
-    padding: 5px;
-}
-
-.time-list dd{
-    margin-bottom: 10px;
-}
-
-.time-list dd ul li{
-    margin-bottom: 5px;
-}
 }

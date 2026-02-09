@@ -6,24 +6,26 @@
     <title>Hội chợ xuân</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="al" href="">
+    <link rel="icon" type="image/png" href="assets/img/icon.png">
     
 </head>
 <body id ="main-body">
+
     <header id="main-header">
         <div id ="time-count">
             <div class="time">
-                <p><span id = "days">00</span> ngày</p>
+                <p id = "days"></p>
             </div>
             <div class="time">
-                <p><span id = "hours">00</span> giờ</p>
+                <p id ="hours"></p>
             </div>
             <div class="time">
-                <p><span id = "minutes">00</span> phút</p>
+                <p id = "minutes"></p>
             </div>
             <div class="time">
-                <p><span id = "seconds">00</span> giây</p>
+                <p id = "seconds"></p>
             </div>
         </div>
         <h1> <img src = "assets/img/cvl_logo2.png" id ="cvl_logo"> Hội chợ xuân Châu Văn Liêm</h1>
@@ -33,6 +35,9 @@
     </header>
     <nav>
         <ul>
+            <li>
+                <button onclick="change_main_header_visibility()" id="hide-show-button">↑</button>
+            </li>
             <li class= "section">
                 <a href="nav/trangchu.html" target="content">
                     <div class = "section-name">
@@ -66,8 +71,9 @@
         </ul>
     </nav>
 
-    <iframe src="nav/trangchu.html" name="content"></iframe>
-    <script src="script.js"></script>
 
+
+    <iframe src="nav/trangchu.html" name="content"></iframe>
+    <script src="script/countdown-timer.js"></script>
 </body>
 </html>

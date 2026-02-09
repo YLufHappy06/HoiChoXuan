@@ -1,0 +1,67 @@
+@media (max-width: 768px) {
+body {
+    display: flex;
+    flex-direction: column;
+  }
+#body{
+    padding: 0;
+    margin:0;
+    font-size: 8px;
+}
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+#main-header h1{
+        font-size: 18px;
+    }
+#cvl_logo{
+        width: 50px;
+    }
+#offical-web-link{
+    font-size: 100%;
+}
+
+#main-header #time-count{
+    font-size: 100%;
+    top: 0
+}
+
+#hide-show-button{
+    font-size: 100%;
+}
+
+nav {
+    font-size: 10px;
+}
+
+nav ul li:nth-child(1){
+    flex: 0 0 25px;
+}
+
+.title h1{
+        font-size: 20px;
+    }
+.list-showcase{
+    width: 90%;
+}
+
+.custom-type li::before{
+    width: 5px;
+    height: 5px;
+    top:5px;
+    left:-10px;
+}
+
+.time-list{
+    padding: 5px;
+}
+
+.time-list dd{
+    margin-bottom: 10px;
+}
+
+.time-list dd ul li{
+    margin-bottom: 5px;
+}
+}
