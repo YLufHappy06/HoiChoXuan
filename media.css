@@ -6,10 +6,14 @@ body {
 #body{
     padding: 0;
     margin:0;
-    font-size: 8px;
+    font-size: 9px;
 }
 ::-webkit-scrollbar{
     width: 8px;
+}
+
+.text{
+    padding-inline: 5%;
 }
 
 #main-header h1{
@@ -27,9 +31,10 @@ body {
     top: 0
 }
 
-#hide-show-button{
-    font-size: 100%;
-}
+/* #hide-show-button{
+    font-size: 3em;
+    padding: 0;
+} */
 
 nav {
     font-size: 10px;
@@ -37,6 +42,28 @@ nav {
 
 nav ul li:nth-child(1){
     flex: 0 0 25px;
+}
+
+.src{
+    font-size: 12px;
+}
+
+.tag{
+    padding-bottom: 2px;
+    padding-inline: 2px;
+}
+
+.tag-iframe{
+    width: 200px;
+    aspect-ratio: 1/1;
+}
+
+.tag-container{
+    gap:5px
+}
+
+.tag-title{
+    font-size: 12px;
 }
 
 .title h1{
@@ -63,5 +90,38 @@ nav ul li:nth-child(1){
 
 .time-list dd ul li{
     margin-bottom: 5px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    width: 75%;
+}
+form > div{
+    margin-bottom: 15px;
+}
+
+input{
+    margin-bottom: 15px;
+}
+
+label{
+    font-size: 12px;
+}
+
+input[type=text]{
+    width: 60%;
+    height: 15px;
+}
+input[type=radio]{
+    display: none;
+    cursor: pointer;
+}
+input[type=radio] + label::before{
+    height: 8px;
+    width: 8px;
+    left: -10px;
 }
 }
