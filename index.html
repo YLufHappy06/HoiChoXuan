@@ -36,7 +36,7 @@
     <nav>
         <ul>
             <li>
-                <button onclick="change_main_header_visibility()" id="hide-show-button"><i class="fa-solid fa-angles-up" id="hide-show-icon"></i></button>
+                <button onclick="open_settings()" id="settings-button"><i class="fa-solid fa-bars"></i></i></button>
             </li>
             <li class= "section">
                 <a href="nav/trangchu.html" target="content">
@@ -74,9 +74,29 @@
         </ul>
     </nav>
 
+    <div id="settings-container">
+        <p>Settings</p>
+        <div id = "settings">
+            <button id="setting-close-button" onclick="close_settings()">X</button>
+            <div class = "option">
+                <label for="animation-scroll">Ẩn đầu trang</label>
+                <input type="checkbox" id="hide-show-header" onclick="change_main_header_visibility()">
+                <label for="hide-show-header" class="check"></label>
+            </div>
+            <div class = "option">
+                <label for="animation-hover">Hiệu ứng chỉ chuột</label>
+                <input type="checkbox" id="animation-hover" onclick="toggle_hover_animation()">
+                <label for="animation-hover" class="check"></label>
+            </div>
+            <div class = "option">
+                <label for="animation-scroll">Hiệu ứng lướt</label>
+                <input type="checkbox" id="animation-scroll" onclick="toggle_scroll_animation()">
+                <label for="animation-scroll" class="check"></label>
+            </div>
+        </div>
+    </div>
 
-
-    <iframe src="nav/trangchu.html" name="content"></iframe>
+    <iframe src="nav/trangchu.html" name="content" id="content"></iframe>
     <script src="script/main.js"></script>
 </body>
 </html>

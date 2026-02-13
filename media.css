@@ -36,6 +36,24 @@ body {
     padding: 0;
 } */
 
+#settings{
+    padding: 10px;
+    padding-top: 80px;
+    width: 300px;
+    height: 200px;
+}
+
+#settings label{
+    font-size: 16px;
+}
+
+#setting-close-button{
+    scale: 2;
+    position: absolute;
+    right: 25px;
+    top:25px;
+}
+
 nav {
     font-size: 10px;
 }
@@ -122,5 +140,23 @@ input[type=radio] + label::before{
     height: 8px;
     width: 8px;
     left: -10px;
+}
+
+.check{
+    width: 40px;
+    height: 20px;
+    margin-left: 10px;
+}
+.check::before{
+    content: "";
+    width: 20px;
+    aspect-ratio: 1/1;
+}
+input[type=checkbox]:checked + .check::before{
+    transform: translateX(20px);
+}
+
+video{
+    aspect-ratio: 16/9;
 }
 }
