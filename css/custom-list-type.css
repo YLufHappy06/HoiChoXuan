@@ -1,0 +1,35 @@
+@import url(root.css);
+
+.time-list{
+    border: 2px inset rgb(255, 206, 161);
+    padding: 20px;
+}
+
+.time-list dt{
+    color: gold;
+}
+
+.time-list dd{
+    margin-bottom: 1em;
+    font-family: monospace;
+}
+
+.time-list dd ul li{
+    margin-bottom: 10px;
+}
+
+.custom-type li{
+    list-style-type: none;
+    position: relative;
+    margin-bottom: 1em;
+}
+.custom-type li::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-image: var(--ul-gradient);
+    border-radius: 50%;
+    top:15px;
+    left:-20px;
+}

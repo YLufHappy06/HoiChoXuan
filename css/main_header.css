@@ -1,0 +1,99 @@
+@import url(root.css);
+
+
+#main-header {
+    color: white;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    height: 150px;
+
+    background-image: var(--main-header-background);
+    background-position: center;
+
+    transform-origin: top;
+    transform: scaleY(1);
+    opacity: 1;
+}
+#main-header.hidden {
+    animation: hide;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#main-header.showed {
+    animation: show;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+#main-header h1{
+    animation: flashtext;
+    align-self: center;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+#offical-web-link{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 125%;
+}
+#main-header #time-count{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    gap:20px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 125%;
+}
+#cvl_logo{
+    width: 100px;
+    vertical-align: middle;
+}
+
+
+nav {
+    background-color: var(--nav-light-color);
+    box-shadow: 0 4px 2px -2px gray;
+    border-bottom: 1px solid;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li:nth-child(1){
+    flex: 0 0 100px;
+}
+
+nav li {
+    flex:1;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color:var(--nav-dark-color);
+}
+
+.section-name{
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+.section-name:hover {
+    color: var(--nav-light-color);
+    background-color: var(--nav-dark-color);
+    transform: scale(1.1);
+}

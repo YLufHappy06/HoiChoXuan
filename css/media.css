@@ -1,0 +1,172 @@
+@import url(root.css);
+
+@media (max-width: 768px) {
+body {
+    display: flex;
+    flex-direction: column;
+  }
+#body{
+    padding: 0;
+    margin:0;
+    font-size: 9px;
+}
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+.text{
+    padding-inline: 5%;
+}
+
+#main-header h1{
+        font-size: 18px;
+    }
+#cvl_logo{
+        width: 50px;
+    }
+#offical-web-link{
+    font-size: 100%;
+}
+
+#main-header #time-count{
+    font-size: 100%;
+    top: 0
+}
+
+/* #hide-show-button{
+    font-size: 3em;
+    padding: 0;
+} */
+
+#settings{
+    padding: 20px;
+    padding-top: 50px;
+    width: 300px;
+    height: 200px;
+}
+
+#settings label{
+    font-size: 16px;
+}
+
+#setting-close-button{
+    scale: 2;
+    position: absolute;
+    right: 25px;
+    top:25px;
+}
+
+nav {
+    font-size: 10px;
+}
+
+nav ul li:nth-child(1){
+    flex: 0 0 25px;
+}
+
+.src{
+    font-size: 12px;
+}
+
+.tag{
+    padding-bottom: 2px;
+    padding-inline: 2px;
+}
+
+.strong-tag .tag-title{
+    font-size: 1.5em;
+}
+
+.tag-role-icon{
+    top: -5px;
+}
+
+.tag-iframe{
+    width: 200px;
+}
+
+.tag-container{
+    gap:5px
+}
+
+.tag-title{
+    font-size: 12px;
+}
+
+.title h1{
+        font-size: 20px;
+    }
+.list-showcase{
+    width: 90%;
+}
+
+.custom-type li::before{
+    width: 5px;
+    height: 5px;
+    top:5px;
+    left:-10px;
+}
+
+.time-list{
+    padding: 5px;
+}
+
+.time-list dd{
+    margin-bottom: 10px;
+}
+
+.time-list dd ul li{
+    margin-bottom: 5px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    width: 75%;
+}
+form > div{
+    margin-bottom: 15px;
+}
+
+input{
+    margin-bottom: 15px;
+}
+
+label{
+    font-size: 12px;
+}
+
+input[type=text]{
+    width: 60%;
+    height: 15px;
+}
+input[type=radio]{
+    display: none;
+    cursor: pointer;
+}
+input[type=radio] + label::before{
+    height: 8px;
+    width: 8px;
+    left: -10px;
+}
+
+.check{
+    width: 40px;
+    height: 20px;
+    margin-left: 10px;
+}
+.check::before{
+    content: "";
+    width: 20px;
+    aspect-ratio: 1/1;
+}
+input[type=checkbox]:checked + .check::before{
+    transform: translateX(20px);
+}
+
+video{
+    aspect-ratio: 16/9;
+}
+}

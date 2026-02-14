@@ -56,6 +56,7 @@ function close_settings() {
 let is_main_header_visible = true;
 let hover_animation = false;
 let scroll_animation = false;
+let bg_video_play = false;
 
 function reload_settings(){
     var iframe = document.getElementById("content");
@@ -82,11 +83,12 @@ function change_main_header_visibility() {
     // button_icon.classList.toggle(is_main_header_visible ? "fa-angles-up" : "fa-angles-down");
 }
 
+
+
 function toggle_hover_animation() {
     var iframe = document.getElementById("content");
     var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-    var body = iframeDocument.getElementById('body');
-
+    var body = iframeDocument.getElementById('body');   
     body.classList.toggle("hover-animation");
     hover_animation = !hover_animation;
 }
@@ -95,7 +97,13 @@ function toggle_scroll_animation() {
     var iframe = document.getElementById("content");
     var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
     var body = iframeDocument.getElementById('body');
-
     body.classList.toggle("scroll-animation");
     scroll_animation = !scroll_animation;
+}
+
+function toggle_background_video() {
+    var bgvideo= document.getElementById("background-video");
+    bgvideo.classList.toggle("off");
+    bg_video_play =! bg_video_play;
+        
 }

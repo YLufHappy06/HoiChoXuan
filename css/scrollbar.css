@@ -1,0 +1,18 @@
+@import url(root.css);
+
+::-webkit-scrollbar{
+    width: 1em;
+}
+
+::-webkit-scrollbar-track{
+    background: rgb(59, 51, 0);
+}
+
+::-webkit-scrollbar-thumb{
+    background:rgb(255, 230, 90);
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:rgb(182, 255, 114);
+}

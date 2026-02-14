@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hội chợ xuân</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/png" href="assets/img/icon.png">
     
 </head>
 <body id ="main-body">
+
+    <video id = "background-video" class="off" loop autoplay>
+        <source src="assets/video/bgvideo.mp4" type="video/mp4">
+    </video>
 
     <header id="main-header">
         <div id ="time-count">
@@ -92,6 +96,11 @@
                 <label for="animation-scroll">Hiệu ứng lướt</label>
                 <input type="checkbox" id="animation-scroll" onclick="toggle_scroll_animation()">
                 <label for="animation-scroll" class="check"></label>
+            </div>
+            <div class = "option">
+                <label for="background-video-option">Video nền</label>
+                <input type="checkbox" id="background-video-option" onclick="toggle_background_video()">
+                <label for="background-video-option" class="check"></label>
             </div>
         </div>
     </div>

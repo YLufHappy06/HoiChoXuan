@@ -1,0 +1,21 @@
+
+:root{
+    --header-font: Arial, sans-serif;
+    --title-font: 'Bungee';
+    --content-font: 'Lexend';
+
+    --main-header-background: 
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75)), 
+        url(../assets/img/chau-van-liem.jpg); 
+    
+    --settings-background:rgba(121, 114, 25, 0.9);
+    --settings-border:yellow 1px solid;
+    --settings-shadow: 0 0 25px 10px rgba(255, 255, 96, 0.377);
+
+    --nav-dark-color:rgb(71, 25, 14);
+    --nav-light-color:lightyellow;
+
+    --title-color:rgb(255, 235, 211);
+
+    --ul-gradient: linear-gradient(to right,yellow, rgb(216, 140, 0));
+}

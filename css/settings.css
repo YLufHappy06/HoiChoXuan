@@ -1,0 +1,100 @@
+@import url(root.css);
+
+#settings-button{
+    font-size: 150%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 225, 94);
+    border: none;
+}
+
+#settings-button:hover{
+    background-color: rgb(139, 118, 21);
+    color:white;
+}
+
+#settings-container *{
+    transition: all 0.3s;
+}
+
+#settings-container{
+    color: white;
+    font-family: Bungee;
+    font-size: 150%;
+}
+
+#settings-container.open{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0,0,0,0.5);
+
+    width: 100%;
+    height: 100%;
+}
+#settings-container.open #settings{
+    animation: appear 0.5s;
+    animation-fill-mode: forwards;
+}
+#settings-container{
+    display: none;
+}
+#settings{
+    display: flex;
+    flex-direction: column;
+    align-items:self-start;
+
+    background: var(--settings-background);
+    border-radius: 2vw;
+    border: var(--settings-border);
+    box-shadow: var(--settings-shadow);
+
+    padding: 100px;
+    width: min(50%, 350px);
+    aspect-ratio: 1/1;
+}
+
+#setting-close-button{
+    border: none;
+    background: none;
+    color: white;
+    scale: 2;
+    position: absolute;
+    right: 25px;
+    top:25px;
+    cursor: pointer;
+}
+
+#setting-close-button:hover{
+    color: rgb(255, 54, 54);
+    scale: 2.5;
+}
+
+.option{
+    margin-bottom: 20px;
+}
+
+.check{
+    background-color: wheat;
+    width: 60px;
+    height: 30px;
+    border-radius: 10vw;
+    position:absolute;
+    align-self: center;
+    margin-left: 20px;
+}
+.check::before{
+    content: "";
+    width: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+
+    position: absolute;
+
+    background-color: rgb(90, 69, 0);
+    transition: all 0.3s;
+}
